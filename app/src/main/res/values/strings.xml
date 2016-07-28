@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Conteo Vehicular</string>
+    <string name="btnSigueCalle">Sigue</string>
+    <string name="btnCruzaCalle">Cruza</string>
+    <string name="btnSigueAve">Sigue</string>
+    <string name="btnCruzaAve">Cruza</string>
+    <string name="tvCalleSigue">0</string>
+    <string name="tvCalleCruza">0</string>
+    <string name="tvAvSigue">0</string>
+    <string name="tvAveCruza">0</string>
+    <string name="title_activity_list_days">ListDaysActivity</string>
+</resources>
