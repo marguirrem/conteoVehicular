@@ -13,24 +13,22 @@ import butterknife.OnClick;
 import xyz.aguirre.marlon.app.R;
 
 public class TabHostActivity extends AppCompatActivity {
-    @BindView(R.id.btnSigueCalle)
-    Button btnSigueCalle;
-    @BindView(R.id.btnCruzaCalle)
-    Button btnCruzaCalle;
+
     @BindView(R.id.tvCalleSigue)
     TextView tvCalleSigue;
     @BindView(R.id.tvCalleCruza)
     TextView tvCalleCruza;
-    @BindView(R.id.btnSigueAve)
-    Button btnSigueAve;
-    @BindView(R.id.btnCruzaAve)
-    Button btnCruzaAve;
     @BindView(R.id.tvAveSigue)
     TextView tvAveSigue;
     @BindView(R.id.tvAveCruza)
     TextView tvAveCruza;
+
     private TabHost tabHost;
-    private int sA =0;
+    private int sigueAvenida    = 0;
+    private int cruzaAvenida    = 0;
+    private int sigueCalle      = 0;
+    private int cruzaCalle      = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,9 +49,27 @@ public class TabHostActivity extends AppCompatActivity {
     }
     @OnClick(R.id.btnSigueAve)
     public void handleSigueAve(){
-        sA++;
-        Toast.makeText(getApplicationContext(),"click",Toast.LENGTH_SHORT).show();
-        System.out.println(sA);
-        tvAveSigue.setText(String.valueOf(sA));
+        sigueAvenida++;
+        tvAveSigue.setText(String.valueOf(sigueAvenida));
     }
+
+    @OnClick(R.id.btnCruzaAve)
+    public void handleCruzaAve(){
+        cruzaAvenida++;
+        tvAveCruza.setText(String.valueOf(cruzaAvenida));
+    }
+
+    @OnClick(R.id.btnCruzaCalle)
+    public void handleCruzaCalle(){
+        cruzaCalle++;
+        tvCalleCruza.setText(String.valueOf(cruzaCalle));
+    }
+
+    @OnClick(R.id.btnSigueCalle)
+    public void handleSigueCalle(){
+        sigueCalle++;
+        tvCalleSigue.setText(String.valueOf(sigueCalle));
+    }
+
+
 }

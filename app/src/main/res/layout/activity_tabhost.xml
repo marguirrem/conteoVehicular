@@ -65,12 +65,14 @@
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:text="@string/tvCalleSigue"
+                                            android:freezesText="true"
                                             android:layout_marginLeft="@dimen/margintop"/>
                                         <TextView
                                             android:id="@+id/tvCalleCruza"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:text="@string/tvCalleCruza"
+                                            android:freezesText="true"
                                             android:layout_marginLeft="@dimen/marginNumeros"/>
                                     </LinearLayout>
 
@@ -114,12 +116,14 @@
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:text="@string/tvAvSigue"
+                                            android:freezesText="true"
                                             android:layout_marginLeft="@dimen/margintop"/>
                                         <TextView
                                             android:id="@+id/tvAveCruza"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:text="@string/tvAveCruza"
+                                            android:freezesText="true"
                                             android:layout_marginLeft="@dimen/marginNumeros"/>
                                     </LinearLayout>
                                 </LinearLayout>

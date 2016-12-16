@@ -1,16 +1,17 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion "24.0.0"
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
         applicationId "xyz.aguirre.marlon.app"
-        minSdkVersion 16
-        targetSdkVersion 24
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -22,7 +23,9 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:24.0.0'
-    compile 'com.jakewharton:butterknife:8.2.1'
-    compile 'com.android.support:design:24.1.0'
+    compile "com.android.support:design:$rootProject.ext.designVersion"
+    compile "com.android.support:appcompat-v7:$rootProject.ext.appcompatV7Version"
+    compile "com.jakewharton:butterknife:$rootProject.ext.butterKnifeVersion"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.ext.butterKnifeVersion"
+
 }
